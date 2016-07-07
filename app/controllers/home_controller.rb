@@ -5,4 +5,10 @@ class HomeController < ApplicationController
   def all_creator
   end
   
+  def mypage
+  end
+  
+  def url_upload
+  end
+  
 end
