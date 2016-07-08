@@ -11,18 +11,19 @@ class HomeController < ApplicationController
   end
   
   def url_upload
-
-    @allcreator.name = params[:name]
-    @allcreator.title = params[:title]
-    @allcreator.url = params[:url]
+    
+    
+    @creatorname = params[:name]
+    @creatortitle = params[:title]
+    @creatorurl = params[:url]
     
     new_allcreator =Allcreator.new
-    new_allcreator.name = @allcreator.name
-    new_allcreator.title = @allcreator.title
-    new_allcreator.url = @allcreator.url
+    new_allcreator.name = @creatorname
+    new_allcreator.title = @creatortitle
+    new_allcreator.url = @creatorurl
     new_allcreator.save
     
-    redirect_to "/all_creator"
+    redirect_to "/home/all_creator"
   end
   
 end

@@ -11,12 +11,12 @@
 				<div id="portfolio-home" class="isotope home-project-3col">
 					<div class="project-item illustration print">
 						<div class="project-gal">
-							<iframe width="560" height="315"  src="<% @every_allcreator.each do |youtube| %>
-							<%= youtube.name %>
+						<% @every_allcreator.each do |youtube| %>
+							<%= youtube.name %><br>
 							<%= youtube.title %>
-							<%= youtube.url %>
-							<% end %>" frameborder="0" allowfullscreen></iframe>
-							
+								
+							<iframe width="560" height="315" src="<%=youtube.url%>" frameborder="0" allowfullscreen></iframe>
+							<% end %>
 						</div>
 						<div class="project-info">
 							<h2>Cras ornare tristique elit</h2>
@@ -31,6 +31,7 @@
 		<div class="space90"></div>
 
 	</div>
+	
 
 
 	<!-- FOOTER COPYRIGHT -->

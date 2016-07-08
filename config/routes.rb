@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  
   get 'home/index'
   get 'home/mypage'
-  get 'home/all_creator'
-  post "home/url_upload"
+  
+  post 'url_upload' => "home#url_upload"
+  get  'home/all_creator'
+  
  
   
   
