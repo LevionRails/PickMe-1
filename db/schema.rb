@@ -14,6 +14,10 @@
 ActiveRecord::Schema.define(version: 20160707075519) do
 
   create_table "allcreators", force: :cascade do |t|
+    t.integer  "skintype"
+    t.string   "name"
+    t.string   "title"
+    t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

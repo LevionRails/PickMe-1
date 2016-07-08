@@ -11,15 +11,12 @@
 				<div id="portfolio-home" class="isotope home-project-3col">
 					<div class="project-item illustration print">
 						<div class="project-gal">
-							<img src="/images/projects/3.jpg" class="img-responsive" alt="">
-							<div class="overlay-folio">
-								<div class="hover-box">
-									<div class="hover-zoom">
-										<a class="mp-lightbox zoom" href="/images/projects/3.jpg"><i class="icon-plus2"></i></a>
-										<a class="link" href="portfolio-single-slider.html"><i class="icon-link3"></i></a>					
-									</div>
-								</div>
-							</div>
+							<iframe width="560" height="315"  src="<% @every_allcreator.each do |youtube| %>
+							<%= youtube.name %>
+							<%= youtube.title %>
+							<%= youtube.url %>
+							<% end %>" frameborder="0" allowfullscreen></iframe>
+							
 						</div>
 						<div class="project-info">
 							<h2>Cras ornare tristique elit</h2>
