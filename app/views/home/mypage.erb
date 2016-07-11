@@ -1,7 +1,12 @@
 <body>
     <%= render partial: "header"%>
 
-<div class="space90"></div>
+
+					        <script type="text/javascript">
+					            $(function () {
+					                $('#datetimepicker1').datetimepicker();
+					            });
+					        </script>
 
 <div class="outer-wrapper">
 	<div class="inner-content no-padding">
@@ -15,26 +20,45 @@
           
           <div class="row">
               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
-                  <form id="contact-form" class="form" action="home/url_upload" method="POST" role="form">
+                  <form id="contact-form" class="form" action="/url_upload" method="POST" role="form">
                       <div class="form-group">
                           <label class="form-label" for="name">이름</label>
-                          <input type="text" class="form-control" id="name" name="name" placeholder="Your name" tabindex="1" required>
+                          <input type="text" class="form-control" id="name" name="name" placeholder="name" tabindex="1" required>
                       </div>                            
                            
                       <div class="form-group">
                           <label class="form-label" for="name">제목</label>
-                          <input type="text" class="form-control" id="name" name="name" placeholder="Your name" tabindex="1" required>
+                          <input type="text" class="form-control" id="name" name="name" placeholder="title" tabindex="1" required>
                       </div>
                       
-                        <div class="dropdown">
+                      <div class="dropdown">
+                      	<label class="form-label" for="name">피부 타입  </label>
                         <select name="피부타입" class="dropdown-select">
                           <option value="">건성</option>
                           <option value="1">중성</option>
                           <option value="2">복합성</option>
                           <option value="3">지성</option>
                         </select>
-                        </div>
-    
+                      </div><br>
+          
+									
+					    <div class="row">
+					    
+					        <div class='col-sm-6'>
+					            <div class="form-group">
+					            	<label class="form-label" for="name">업로드 일 </label>
+					                <div class='input-group date' id='datetimepicker1'>
+					                    <input type='text' class="form-control" />
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
+					            </div>
+					        </div>
+					        
+
+					    </div>
+			
                       <div class="form-group">
                           <label class="form-label" for="subject">동영상 url</label>
                           <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" tabindex="3">
@@ -163,6 +187,13 @@
 <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
 
 <script src="js/main.js"></script>
+
+
+
+
+
+
+
 
 
 </body>
